@@ -157,6 +157,7 @@ public class CalendarProviderUtil {
         valueEvent.put(CalendarContract.Events.DESCRIPTION, calendars.note);
         valueEvent.put(CalendarContract.Events.CALENDAR_ID, calendarId);
         valueEvent.put(CalendarContract.Events.EVENT_TIMEZONE, "Asia/Shanghai");
+        valueEvent.put(CalendarContract.Events.ALL_DAY,calendars.allDay);
 
         Uri insertEventUri = contentResolver.insert(eventUri, valueEvent);
         if (insertEventUri == null) {
